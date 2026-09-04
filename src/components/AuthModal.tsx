@@ -139,7 +139,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     >
       {/* Paper Card Modal Container */}
       <div 
-        className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative transform transition-all animate-scaleUp cursor-default"
+        className="w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl border border-slate-200 relative transform transition-all animate-scaleUp cursor-default no-scrollbar"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Paper texture dot background overlay */}
@@ -158,16 +158,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         </button>
 
         {/* Header Branding */}
-        <div className="pt-8 px-8 pb-4 text-center relative z-10">
+        <div className="pt-6 sm:pt-8 px-6 sm:px-8 pb-3 sm:pb-4 text-center relative z-10">
           <img 
             src="/logo.png" 
             alt="PyLearn Logo" 
-            className="h-20 w-auto object-contain mx-auto mb-3" 
+            className="h-16 sm:h-20 w-auto object-contain mx-auto mb-2.5 sm:mb-3" 
           />
-          <h3 className="text-2xl font-heading font-extrabold text-slate-900">
+          <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-slate-900">
             {activeTab === 'login' ? 'Welcome Back!' : 'Start Your Python Quest'}
           </h3>
-          <p className="text-sm text-slate-500 font-serif mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 font-serif mt-1">
             {activeTab === 'login'
               ? 'Sign in to save your XP, streaks, and quiz progress.'
               : 'Join over 50,000+ zero-to-hero learners today!'}
@@ -175,7 +175,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         </div>
 
         {/* Tab Switcher Pills */}
-        <div className="px-8 mb-6 relative z-10">
+        <div className="px-6 sm:px-8 mb-4 sm:mb-6 relative z-10">
           <div className="flex rounded-2xl bg-slate-100 p-1.5 border border-slate-200/80">
             <button
               onClick={() => { setActiveTab('login'); setErrorMessage(''); setUnverifiedEmail(null); }}
@@ -204,7 +204,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         </div>
 
         {/* Form Body */}
-        <form onSubmit={handleSubmit} className="px-8 pb-6 space-y-4 relative z-10">
+        <form onSubmit={handleSubmit} className="px-6 sm:px-8 pb-6 space-y-3.5 sm:space-y-4 relative z-10">
           
           {/* Error Banner */}
           {errorMessage && (

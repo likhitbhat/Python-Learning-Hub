@@ -53,10 +53,10 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Action Buttons */}
-          <div className="relative z-10 flex flex-wrap items-center gap-3.5 pt-8">
+          <div className="relative z-10 flex flex-wrap items-center gap-3 sm:gap-3.5 pt-6 sm:pt-8">
             <button
               onClick={onStartNotes}
-              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-blue-600 border border-slate-300 font-extrabold text-sm sm:text-base shadow-xs hover:shadow-md transition-all cursor-pointer"
+              className="w-full sm:w-auto justify-center flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-blue-600 border border-slate-300 font-extrabold text-sm sm:text-base shadow-xs hover:shadow-md transition-all cursor-pointer"
             >
               <BookOpen className="w-5 h-5 text-blue-600" />
               <span>Start Reading Notes</span>
@@ -64,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({
 
             <button
               onClick={onStartQuiz}
-              className="flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base shadow-md shadow-blue-600/30 hover:scale-[1.02] transition-all cursor-pointer"
+              className="w-full sm:w-auto justify-center flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base shadow-md shadow-blue-600/30 hover:scale-[1.02] transition-all cursor-pointer"
             >
               <span>Take First Quiz</span>
               <ArrowRight className="w-5 h-5" />
@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({
 
             <button
               onClick={onOpenProjects}
-              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-800 border border-purple-300 font-extrabold text-sm sm:text-base transition-all cursor-pointer"
+              className="w-full sm:w-auto justify-center flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-800 border border-purple-300 font-extrabold text-sm sm:text-base transition-all cursor-pointer"
             >
               <FolderGit2 className="w-5 h-5 text-purple-700" />
               <span>Mini-Project Labs</span>
@@ -81,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({
             {!user && (
               <button
                 onClick={onOpenAuth}
-                className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
+                className="w-full sm:w-auto justify-center flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
               >
                 <LogIn className="w-5 h-5" />
                 <span>Create Free Account</span>

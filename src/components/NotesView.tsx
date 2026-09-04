@@ -39,23 +39,23 @@ export const NotesView: React.FC<NotesViewProps> = ({
     <div className="max-w-4xl mx-auto py-6 px-4 sm:px-6">
       
       {/* Top Navigation Bar */}
-      <div className="flex items-center justify-between gap-4 mb-8">
+      <div className="flex items-center justify-between gap-3 mb-8">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors cursor-pointer group"
+          className="flex items-center gap-2 text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors cursor-pointer group min-w-0"
         >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          <div className="flex flex-col text-left">
-            <span className="text-xs uppercase tracking-wider text-slate-400 font-bold">Illustrated Story Notes</span>
-            <span className="text-base text-slate-900 font-bold">{notes.title}</span>
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform flex-shrink-0" />
+          <div className="flex flex-col text-left min-w-0">
+            <span className="hidden sm:block text-xs uppercase tracking-wider text-slate-400 font-bold">Illustrated Story Notes</span>
+            <span className="text-sm sm:text-base text-slate-900 font-bold truncate">{notes.title}</span>
           </div>
         </button>
 
         <button
           onClick={() => onTakeQuiz(notes.topicId)}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-600/30 transition-all cursor-pointer"
+          className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm shadow-md shadow-blue-600/30 transition-all cursor-pointer flex-shrink-0"
         >
-          <Play className="w-4 h-4 fill-white" />
+          <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />
           <span>Take Quiz</span>
         </button>
       </div>
@@ -160,8 +160,8 @@ export const NotesView: React.FC<NotesViewProps> = ({
 
                   {/* Code Example Block */}
                   {section.codeExample && (
-                    <div className="rounded-2xl bg-slate-900 text-slate-100 p-5 font-mono text-sm shadow-inner relative group border border-slate-800 overflow-x-auto">
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-xs text-slate-400">
+                    <div className="rounded-2xl bg-slate-900 text-slate-100 p-4 sm:p-5 font-mono text-sm shadow-inner relative group border border-slate-800 overflow-x-auto">
+                      <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-slate-800 text-xs text-slate-400">
                         <span className="font-semibold text-slate-300">Python Code Example</span>
                         <div className="flex items-center gap-2">
                           <button

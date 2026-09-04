@@ -94,24 +94,24 @@ export const PlaygroundModal: React.FC<PlaygroundModalProps> = ({
       >
         
         {/* Modal Header */}
-        <div className="px-6 py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-xs">
+        <div className="px-4 sm:px-6 py-3 sm:py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <div className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-xs flex-shrink-0">
               <Code2 className="w-4 h-4" />
             </div>
-            <div>
-              <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
-                <span>Interactive WASM Python Playground</span>
-                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-blue-900/80 border border-blue-700 text-blue-300">Pyodide v0.25</span>
+            <div className="min-w-0">
+              <h3 className="text-sm sm:text-base font-bold text-slate-100 flex items-center gap-2 truncate">
+                <span>Python Playground</span>
+                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-blue-900/80 border border-blue-700 text-blue-300 flex-shrink-0">Pyodide WASM</span>
               </h3>
-              <p className="text-xs text-slate-400 font-serif">Run Python code instantly in your browser with zero server latency.</p>
+              <p className="hidden sm:block text-xs text-slate-400 font-serif">Run Python code instantly in your browser with zero server latency.</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
             <button
               onClick={() => setIsFullScreen(!isFullScreen)}
-              className="p-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer"
               title={isFullScreen ? 'Exit Fullscreen' : 'Fullscreen Mode'}
             >
               {isFullScreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
@@ -119,7 +119,7 @@ export const PlaygroundModal: React.FC<PlaygroundModalProps> = ({
 
             <button
               onClick={onClose}
-              className="p-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -127,14 +127,14 @@ export const PlaygroundModal: React.FC<PlaygroundModalProps> = ({
         </div>
 
         {/* Sample Scripts Selector Toolbar */}
-        <div className="px-6 py-2.5 bg-slate-900/60 border-b border-slate-800/80 flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
-          <div className="flex items-center gap-2">
+        <div className="px-4 sm:px-6 py-2.5 bg-slate-900/60 border-b border-slate-800/80 flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-2 flex-shrink-0">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Presets:</span>
             {SAMPLE_SCRIPTS.map((script, idx) => (
               <button
                 key={idx}
                 onClick={() => setCode(script.code)}
-                className="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-medium transition-colors cursor-pointer whitespace-nowrap"
+                className="px-2.5 sm:px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-medium transition-colors cursor-pointer whitespace-nowrap"
               >
                 {script.name}
               </button>
@@ -144,18 +144,19 @@ export const PlaygroundModal: React.FC<PlaygroundModalProps> = ({
           <button
             onClick={handleRun}
             disabled={isRunning}
-            className="flex items-center gap-2 px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-blue-600/30 transition-all cursor-pointer disabled:opacity-50"
+            className="flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-blue-600/30 transition-all cursor-pointer disabled:opacity-50 flex-shrink-0"
           >
-            {isRunning ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4 fill-white" />}
-            <span>{isRunning ? 'Executing...' : 'Run Code (Ctrl+Enter)'}</span>
+            {isRunning ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />}
+            <span>{isRunning ? 'Executing...' : 'Run Code'}</span>
+            <span className="hidden md:inline font-normal text-blue-200 text-xs">(Ctrl+Enter)</span>
           </button>
         </div>
 
         {/* Main Split Body (Editor Left, Terminal Right) */}
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-800 overflow-hidden">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-800 overflow-y-auto lg:overflow-hidden">
           
           {/* Code Editor */}
-          <div className="p-4 flex flex-col bg-slate-950">
+          <div className="p-3 sm:p-4 flex flex-col bg-slate-950 min-h-[220px] lg:min-h-0">
             <div className="flex items-center justify-between pb-2 mb-2 text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-slate-800">
               <span className="flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5 text-blue-400" /> main.py</span>
               <span>Python 3.11</span>
@@ -163,14 +164,14 @@ export const PlaygroundModal: React.FC<PlaygroundModalProps> = ({
             <textarea
               value={code}
               onChange={(e) => setCode(e.target.value)}
-              className="flex-1 w-full h-full bg-slate-950 text-emerald-400 font-mono text-sm sm:text-base leading-relaxed p-2 outline-none resize-none no-scrollbar"
+              className="flex-1 w-full min-h-[160px] lg:min-h-0 bg-slate-950 text-emerald-400 font-mono text-xs sm:text-sm leading-relaxed p-2 outline-none resize-none no-scrollbar"
               placeholder="# Type Python code here..."
               spellCheck={false}
             />
           </div>
 
           {/* Terminal Output Buffer */}
-          <div className="p-4 flex flex-col bg-slate-900/90 overflow-hidden">
+          <div className="p-3 sm:p-4 flex flex-col bg-slate-900/90 min-h-[200px] lg:min-h-0 overflow-hidden">
             <div className="flex items-center justify-between pb-2 mb-2 text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-slate-800">
               <span className="flex items-center gap-1.5"><Terminal className="w-3.5 h-3.5 text-amber-400" /> Execution Terminal Output</span>
               {result && (

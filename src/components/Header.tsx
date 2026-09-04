@@ -55,10 +55,10 @@ export const Header: React.FC<HeaderProps> = ({
             className="h-11 w-auto object-contain group-hover:scale-105 transition-transform" 
           />
           <div className="flex flex-col">
-            <span className="font-heading font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight leading-none">
+            <span className="font-heading font-extrabold text-base sm:text-xl text-slate-900 tracking-tight leading-none">
               PyLearn <span className="text-blue-600 font-normal">Notebook</span>
             </span>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-slate-400">Zero to Hero Masterclass</span>
+            <span className="hidden sm:block text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-0.5">Zero to Hero Masterclass</span>
           </div>
         </div>
 
