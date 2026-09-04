@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Title & Meta Tags -->
+    <title>PyLearn Notebook - Python Zero to Hero Masterclass & Interactive Quizzes</title>
+    <meta name="title" content="PyLearn Notebook - Python Zero to Hero Masterclass & Interactive Quizzes" />
+    <meta name="description" content="Master Python programming with zero experience! Interactive story notes, Gemini-generated visual architecture diagrams, interview cheat sheets, Pyodide WASM in-browser execution, and XP quizzes." />
+    <meta name="keywords" content="Python programming, Python masterclass, Learn Python for beginners, Interactive Python notes, Python visual block diagrams, Python interview cheat sheet, Pyodide WASM playground, Python quizzes" />
+    <meta name="author" content="PyLearn Notebook Team" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://pylearnnotebook.com/" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pylearnnotebook.com/" />
+    <meta property="og:title" content="PyLearn Notebook - Python Zero to Hero Masterclass" />
+    <meta property="og:description" content="Master Python with zero experience! Interactive story notes, Gemini-generated visual architecture diagrams, interview cheat sheet, and live WASM code execution." />
+    <meta property="og:image" content="https://pylearnnotebook.com/logo.png" />
+    <meta property="og:site_name" content="PyLearn Notebook" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://pylearnnotebook.com/" />
+    <meta name="twitter:title" content="PyLearn Notebook - Python Zero to Hero Masterclass" />
+    <meta name="twitter:description" content="Master Python with zero experience! Interactive story notes, Gemini-generated visual architecture diagrams, interview cheat sheet, and live WASM code execution." />
+    <meta name="twitter:image" content="https://pylearnnotebook.com/logo.png" />
+
+    <!-- Fonts: Inter, Outfit, Caveat for handwritten notebook aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Pyodide for Live In-Browser Python Runtime -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js" defer></script>
+
+    <!-- JSON-LD Structured Data Schema (WebSite & SearchAction) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PyLearn Notebook",
+      "alternateName": "Python Learning Hub Masterclass",
+      "url": "https://pylearnnotebook.com/",
+      "description": "Zero-to-Hero interactive Python learning platform featuring visual block diagrams, story notes, interview cheat sheet, and WASM code execution.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://pylearnnotebook.com/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data Schema (Educational Course) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Python Zero-to-Hero Masterclass",
+      "description": "Comprehensive 16-module interactive Python curriculum covering basic syntax, data structures, OOP, file I/O, algorithm complexity, testing, and metaprogramming.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "PyLearn Notebook",
+        "sameAs": "https://pylearnnotebook.com/"
+      },
+      "educationalLevel": "Beginner to Advanced",
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data Schema (FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I learn Python with zero coding experience on PyLearn Notebook?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! PyLearn Notebook is specially designed for complete beginners. Every concept is explained through visual block diagrams, real-world story analogies, interactive code playgrounds, and practice quizzes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does PyLearn Notebook allow running Python code in the browser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! PyLearn Notebook uses Pyodide WebAssembly (WASM) to execute Python code safely inside your browser without requiring any server setup or software installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What topics are covered in the PyLearn Notebook Masterclass?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The curriculum covers 16 comprehensive modules ranging from Python Basics, Data Types, Control Flow, and OOP to File I/O, Decorators, Big-O Complexity, Testing, and Metaprogramming."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#f5f4f0] text-slate-800 font-sans antialiased min-h-screen selection:bg-blue-200 selection:text-blue-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

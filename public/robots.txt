@@ -1,0 +1,16 @@
+# -------------------------------------------------------------
+# 🤖 PyLearn Notebook Search Engine Crawling Instructions
+# -------------------------------------------------------------
+User-agent: *
+Allow: /
+Allow: /logo.png
+Allow: /diagrams/
+
+# Disallow indexing private backend endpoints and session parameters
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?*token=*
+Disallow: /*?*auth=*
+
+# XML Sitemap Location for Search Engine Indexing
+Sitemap: https://pylearnnotebook.com/sitemap.xml

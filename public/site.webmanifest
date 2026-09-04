@@ -1,0 +1,21 @@
+{
+  "name": "PyLearn Notebook - Python Masterclass",
+  "short_name": "PyLearn",
+  "description": "Zero-to-Hero interactive Python masterclass platform with story notes, visual block diagrams, quizzes, and WASM playground.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f4f0",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

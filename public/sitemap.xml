@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://pylearnnotebook.com/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Interactive Cheat Sheet -->
+  <url>
+    <loc>https://pylearnnotebook.com/#cheat-sheet</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Hands-On Labs -->
+  <url>
+    <loc>https://pylearnnotebook.com/#projects</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Topic 1: Python Basics & Hello World -->
+  <url>
+    <loc>https://pylearnnotebook.com/#python-basics</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 2: Variables & Data Types -->
+  <url>
+    <loc>https://pylearnnotebook.com/#variables-data-types</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 3: User Input & I/O -->
+  <url>
+    <loc>https://pylearnnotebook.com/#user-input-io</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 4: Execution Engine Architecture -->
+  <url>
+    <loc>https://pylearnnotebook.com/#execution-engine</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 5: Conditions & Loops -->
+  <url>
+    <loc>https://pylearnnotebook.com/#conditions-loops</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 6: Functions & Modules -->
+  <url>
+    <loc>https://pylearnnotebook.com/#functions-modules</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 7: Data Structures (Lists, Tuples, Sets, Dicts) -->
+  <url>
+    <loc>https://pylearnnotebook.com/#data-structures</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 8: Object-Oriented Programming (OOP) -->
+  <url>
+    <loc>https://pylearnnotebook.com/#oop-basics</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Topic 9: Exception Handling -->
+  <url>
+    <loc>https://pylearnnotebook.com/#exception-handling</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic 10: File I/O & Context Managers -->
+  <url>
+    <loc>https://pylearnnotebook.com/#file-io</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic 11: Decorators & Generators -->
+  <url>
+    <loc>https://pylearnnotebook.com/#decorators-generators</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic 12: Comprehensions & Lambdas -->
+  <url>
+    <loc>https://pylearnnotebook.com/#comprehensions-lambdas</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic 13: Standard Library & Built-in Modules -->
+  <url>
+    <loc>https://pylearnnotebook.com/#built-in-modules</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic 14: Algorithm Complexity & Big-O -->
+  <url>
+    <loc>https://pylearnnotebook.com/#algorithm-complexity</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic 15: Testing & Debugging -->
+  <url>
+    <loc>https://pylearnnotebook.com/#testing-debugging</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Topic 16: Advanced Metaprogramming -->
+  <url>
+    <loc>https://pylearnnotebook.com/#advanced-metaprogramming</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
