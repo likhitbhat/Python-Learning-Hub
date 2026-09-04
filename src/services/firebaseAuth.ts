@@ -121,6 +121,10 @@ export const parseFirebaseError = (err: any): string => {
   if (code === 'auth/operation-not-allowed') {
     return `Firebase Error (auth/operation-not-allowed): This sign-in method is disabled in Firebase Console. Please enable Email/Password & Google under Authentication -> Sign-in method.`;
   }
+  if (code === 'auth/unauthorized-domain') {
+    const currentDomain = typeof window !== 'undefined' ? window.location.hostname : 'current domain';
+    return `Firebase Error: The domain "${currentDomain}" is not authorized. Please add "${currentDomain}" to Firebase Console -> Authentication -> Settings -> Authorized domains (or open http://localhost:5173 instead of 127.0.0.1).`;
+  }
 
   return rawMsg;
 };
