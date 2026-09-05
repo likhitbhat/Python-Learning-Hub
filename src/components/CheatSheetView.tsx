@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CHEAT_SHEET_DATA } from '../data/cheatSheetData';
 import { ArrowLeft, Zap, Star, Home } from 'lucide-react';
 import * as Icons from 'lucide-react';
+import { InArticleAd } from './InArticleAd';
 
 interface CheatSheetViewProps {
   onBackToHome: () => void;
@@ -95,6 +96,9 @@ export const CheatSheetView: React.FC<CheatSheetViewProps> = ({ onBackToHome }) 
           ))}
         </ul>
       </div>
+
+      {/* In-Article Advertisement */}
+      <InArticleAd />
 
       {/* Footer Quote & Back to Quizzes Button */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6 py-6 border-t border-slate-200 text-center sm:text-left">
